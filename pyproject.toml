@@ -1,0 +1,38 @@
+[project]
+name = "rl_basics"
+version = "0.1.0"
+license = "MIT"
+authors = [{name="Amirhossein Kazemnejad", email="ah.kazemnejad@gmail.com"}]
+requires-python = ">=3.10"
+
+dependencies = [
+  "torch>=2.1,<3.0",
+  "numpy>=1.24,<3.0",
+  "matplotlib>=3.7,<4.0",
+  "plotly>=5.18,<7.0",
+  "dash>=2.14,<3.0",
+  "pandas>=2.0,<3.0",
+  "cloudpickle>=3.0,<4.0",
+  "ipywidgets>=8.1,<9.0",
+  "ipytest>=0.13,<1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-timeout", "nbmake", "nbformat"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["rl_basics*"]
+
+[tool.setuptools.package-data]
+rl_basics = ["_assets/farama/*.png"]
+
+[tool.pytest.ini_options]
+addopts = "-m 'not stress and not slow'"
+markers = [
+  "stress: long-running stress test (skipped in default unit run; opt in via -m stress)",
+  "slow: integration / e2e test (skipped in default unit run; CI runs with -m 'not stress' to include slow + unit)",
+]
