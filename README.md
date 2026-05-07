@@ -18,12 +18,12 @@ Bootcamp. Click the Colab badges below to launch each notebook.
 
 ## Lab 1 — REINFORCE on FourRooms (morning)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kazemnejad/ivado-rl-lab/blob/main/notebooks/student.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kazemnejad/ivado-rl-lab/blob/main/notebooks/lab1_reinforce_fourrooms_student.ipynb)
 
 Implement REINFORCE end-to-end on a 17×17 gridworld and compare
 three advantage rules — vanilla, value baseline, batch baseline —
 to see which one yields a lower-variance gradient estimator. The
-worked answer key is in [`notebooks/solutions.ipynb`](notebooks/solutions.ipynb).
+worked answer key is in [`notebooks/lab1_reinforce_fourrooms.ipynb`](notebooks/lab1_reinforce_fourrooms.ipynb).
 
 ## Lab 2 & Lab 3 — nano-R1 LLM RL (afternoon)
 
