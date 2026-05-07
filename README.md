@@ -11,6 +11,11 @@ Bootcamp. Click the Colab badges below to launch each notebook.
   <sub>Scan to open the repo: <a href="https://github.com/kazemnejad/ivado-rl-lab"><code>github.com/kazemnejad/ivado-rl-lab</code></a></sub>
 </p>
 
+## Lecture slides
+
+- Morning lecture: [`slides/ivado_rl_2026_lecture_morning.pdf`](slides/ivado_rl_2026_lecture_morning.pdf)
+- Afternoon lecture: [`slides/ivado_rl_2026_lecture_afternoon.pdf`](slides/ivado_rl_2026_lecture_afternoon.pdf)
+
 ## Lab 1 — REINFORCE on FourRooms (morning)
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kazemnejad/ivado-rl-lab/blob/main/notebooks/student.ipynb)
