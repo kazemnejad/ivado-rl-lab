@@ -6,10 +6,10 @@ Single source of truth for the IVADO Bootcamp Lab-1 notebooks. Run::
     .venv/bin/python scripts/build_lab1_v2_nb.py
 
     # Just the student stub:
-    .venv/bin/python scripts/build_lab1_v2_nb.py --mode stub --out notebooks/student.ipynb
+    .venv/bin/python scripts/build_lab1_v2_nb.py --mode stub --out notebooks/lab1_reinforce_fourrooms_student.ipynb
 
     # Just the answer key:
-    .venv/bin/python scripts/build_lab1_v2_nb.py --mode answer --out notebooks/solutions.ipynb
+    .venv/bin/python scripts/build_lab1_v2_nb.py --mode answer --out notebooks/lab1_reinforce_fourrooms.ipynb
 
 Section structure follows the lab spec verbatim (§0 Setup → §11 Bridge to
 Lab 2). STUDENT cells (§4–§8) source from the real ``rl_basics.student``
@@ -801,7 +801,7 @@ def main(argv: list[str] | None = None) -> int:
         "--out",
         default=None,
         help="Output path for a single notebook. If omitted, both notebooks "
-             "(student.ipynb + solutions.ipynb) are built.",
+             "(lab1_reinforce_fourrooms_student.ipynb + lab1_reinforce_fourrooms.ipynb) are built.",
     )
     parser.add_argument(
         "--mode",
@@ -818,13 +818,13 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.out is None and args.mode is None:
         targets = [
-            ("stub",   nb_dir / "student.ipynb"),
-            ("answer", nb_dir / "solutions.ipynb"),
+            ("stub",   nb_dir / "lab1_reinforce_fourrooms_student.ipynb"),
+            ("answer", nb_dir / "lab1_reinforce_fourrooms.ipynb"),
         ]
     else:
         mode = args.mode or "answer"
         out = Path(args.out) if args.out else (
-            nb_dir / ("student.ipynb" if mode == "stub" else "solutions.ipynb")
+            nb_dir / ("lab1_reinforce_fourrooms_student.ipynb" if mode == "stub" else "lab1_reinforce_fourrooms.ipynb")
         )
         targets = [(mode, out)]
 

@@ -67,14 +67,14 @@ def test_nb_round_trip(tmp_path: Path, mode: str) -> None:
 
 
 def test_default_builds_both_notebooks(tmp_path: Path, monkeypatch) -> None:
-    """Running with no args emits both student.ipynb + solutions.ipynb."""
+    """Running with no args emits both lab1_reinforce_fourrooms{,_student}.ipynb."""
     builder = _load_builder()
     nb_dir = tmp_path / "notebooks"
     monkeypatch.setattr(builder, "REPO", tmp_path)
     rc = builder.main([])
     assert rc == 0
-    assert (nb_dir / "student.ipynb").exists()
-    assert (nb_dir / "solutions.ipynb").exists()
+    assert (nb_dir / "lab1_reinforce_fourrooms_student.ipynb").exists()
+    assert (nb_dir / "lab1_reinforce_fourrooms.ipynb").exists()
 
 
 def test_stub_function_keeps_signature_and_docstring() -> None:
